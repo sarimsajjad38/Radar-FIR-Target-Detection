@@ -1,29 +1,29 @@
 # Pulse Radar Signal Denoising and Target Detection using FIR Filters
 
-This project simulates a basic pulse radar system using **GNU Octave/MATLAB**. It demonstrates how an FIR (Finite Impulse Response) filter can be used to reduce noise from a received radar signal and improve target detection.
-
-The project was developed to understand practical concepts of Digital Signal Processing (DSP), including radar signal generation, FIR filter design, FFT analysis, and Signal-to-Noise Ratio (SNR).
+A Digital Signal Processing (DSP) project developed in **GNU Octave/MATLAB** that simulates a pulse radar system. The project demonstrates radar pulse generation, target echo simulation, Gaussian noise addition, FIR filter-based denoising, FFT analysis, SNR evaluation, and target detection.
 
 ---
 
 ## Features
 
-- Generates a pulse radar signal
-- Simulates a target echo
-- Adds Gaussian noise to the received signal
-- Designs and applies an FIR low-pass filter
-- Performs FFT analysis before and after filtering
-- Calculates SNR before and after filtering
-- Detects the target and estimates its range
-- Automatically saves all output plots
+- Radar Pulse Generation
+- Target Echo Simulation
+- Gaussian Noise Addition
+- FIR Low-Pass Filter Design
+- Signal Denoising using FIR Filter
+- FFT Analysis (Before & After Filtering)
+- Signal-to-Noise Ratio (SNR) Analysis
+- Target Detection and Range Estimation
+- Automatic Plot Generation and Saving
 
 ---
 
 ## Technologies Used
 
 - GNU Octave 11.x
-- MATLAB-compatible code
+- MATLAB Compatible Code
 - Signal Package
+- Digital Signal Processing (DSP)
 
 ---
 
@@ -45,53 +45,65 @@ Radar-FIR-Target-Detection/
 │   └── save_plot.m
 │
 ├── images/
+│   ├── processing_pipeline.png
+│   ├── radar_pulse.png
+│   ├── target_echo.png
+│   ├── noisy_signal.png
+│   ├── fir_response.png
+│   ├── filtered_signal.png
+│   ├── target_detection.png
+│   ├── fft_analysis.png
+│   └── snr_comparison.png
+│
 ├── README.md
-└── LICENSE
+├── LICENSE
+└── .gitignore
 ```
 
 ---
 
-## Processing Flow
+## How It Works
 
-```
+```text
 Radar Pulse
-      ↓
+      │
+      ▼
 Target Echo
-      ↓
-Gaussian Noise
-      ↓
-FIR Filter
-      ↓
+      │
+      ▼
+Add Gaussian Noise
+      │
+      ▼
+FIR Low-Pass Filter
+      │
+      ▼
 Filtered Signal
-      ↓
-FFT Analysis
-      ↓
-SNR Calculation
-      ↓
-Target Detection
+      │
+      ├──► FFT Analysis
+      ├──► SNR Analysis
+      └──► Target Detection
 ```
 
 ---
 
-## How to Run
+## Installation
 
-1. Install GNU Octave.
-2. Install the Signal package.
+### Clone the repository
+
+```bash
+git clone https://github.com/YOUR_USERNAME/Radar-FIR-Target-Detection.git
+```
+
+### Open the project
+
+```bash
+cd Radar-FIR-Target-Detection/src
+```
+
+### Start GNU Octave
 
 ```octave
-pkg install -forge signal
 pkg load signal
-```
-
-3. Open the project folder.
-
-```octave
-cd src
-```
-
-4. Run the project.
-
-```octave
 main
 ```
 
@@ -99,98 +111,102 @@ main
 
 ## Results
 
-### Complete Processing Pipeline
+### 1. Complete Processing Pipeline
 
 ![Processing Pipeline](images/processing_pipeline.png)
 
 ---
 
-### Radar Pulse
+### 2. Radar Pulse
 
 ![Radar Pulse](images/radar_pulse.png)
 
 ---
 
-### Target Echo
+### 3. Target Echo
 
 ![Target Echo](images/target_echo.png)
 
 ---
 
-### Noisy Signal
+### 4. Noisy Signal
 
 ![Noisy Signal](images/noisy_signal.png)
 
 ---
 
-### FIR Filter Frequency Response
+### 5. FIR Filter Frequency Response
 
 ![FIR Response](images/fir_response.png)
 
 ---
 
-### Filtered Signal
+### 6. Filtered Signal
 
 ![Filtered Signal](images/filtered_signal.png)
 
 ---
 
-### FFT Analysis
+### 7. FFT Analysis
 
 ![FFT Analysis](images/fft_analysis.png)
 
 ---
 
-### Target Detection
+### 8. Target Detection
 
 ![Target Detection](images/target_detection.png)
 
 ---
 
-### SNR Comparison
+### 9. SNR Comparison
 
 ![SNR Comparison](images/snr_comparison.png)
 
 ---
 
-## Sample Output
+## Example Output
 
-```
+```text
+==========================================
+RADAR SIMULATION COMPLETED
+==========================================
+
 Target detected at sample : 201
 
-Estimated Target Range : 301.50 meters
+Estimated Target Range    : 301.50 meters
 
-SNR Before Filtering : 9.99 dB
+SNR Before Filtering      : 9.99 dB
 
-SNR After Filtering : 18.75 dB
+SNR After Filtering       : 18.75 dB
+
+==========================================
 ```
 
 ---
 
-## What I Learned
+## Applications
 
-While working on this project, I gained practical experience with:
-
-- FIR filter design
-- Radar signal simulation
-- Noise reduction techniques
-- FFT and frequency-domain analysis
-- SNR calculation
-- Target detection using thresholding
-- Writing modular MATLAB/GNU Octave programs
+- Pulse Radar Systems
+- Radar Signal Processing
+- Digital Signal Processing (DSP)
+- Target Detection
+- Wireless Communication
+- FIR Filter Design
+- Engineering Education
+- MATLAB/GNU Octave Learning
 
 ---
 
 ## Future Improvements
 
-Some features that can be added in the future:
-
-- Multiple target simulation
-- Doppler effect simulation
-- Adaptive filtering
-- GUI for parameter selection
-- Real radar or audio signal input
-- Comparison of FIR and IIR filters
+- Multiple Target Detection
+- Adaptive FIR Filters
+- Moving Target Simulation (Doppler Effect)
+- FMCW Radar Simulation
+- Interactive GUI
+- Real Audio Signal Support
+- Performance Comparison with IIR Filters
 
 ---
 
@@ -198,8 +214,33 @@ Some features that can be added in the future:
 
 **Sarim Sajjad**
 
-B.Tech in Electronics and Communication Engineering
+Final Year B.Tech (Electronics and Communication Engineering)
+
+Interested in:
+
+- Digital Signal Processing
+- Embedded Systems
+- Software Development
+- AI & Machine Learning
 
 ---
 
-If you found this project useful, feel free to star the repository.
+## License
+
+This project is licensed under the MIT License.
+
+---
+
+## Support
+
+If you found this project helpful:
+
+- Star this repository
+- Fork it
+- Suggest improvements by opening an issue or pull request
+
+---
+
+## Keywords
+
+GNU Octave, MATLAB, DSP, FIR Filter, Radar Signal Processing, Target Detection, Signal Denoising, FFT, SNR, Pulse Radar, Digital Signal Processing, Engineering Project, Electronics, MATLAB Project
