@@ -1,0 +1,15 @@
+# Octave/MATLAB temporary files
+*.asv
+*.mat
+*.log
+*.tmp
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# VS Code
+.vscode/
+
+# Octave workspace
+octave-workspace
